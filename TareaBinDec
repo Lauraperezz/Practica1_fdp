@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main()
+{
+    int op, bin, dec, tot;
+    int conde, conta;
+    int arre[30];
+    
+    printf("Programa para transformar un numero binario a decimal, o de decimal a binario\n\t");
+    printf("Oprima 1 si quiere convertir de decimal a binario\n");
+    printf("\tOprima 2 si quiere convertir de binario a decimal\n");
+    scanf("%d", &op);
+    
+    if(op==1){
+        printf("Ingrese el numero decimal: \n");
+        scanf("%d", &dec);
+        conde=0;
+        while(dec>0){
+            arre[conde]=dec%2;
+            dec/=2;
+            conde++;
+        }
+        for(conta=conde-1;conta>=0;--conta){
+            printf("%i", arre[conta]);
+        }
+        }else if(op==2){
+            int arre[50]={1,2,4,8,16,32,64,128,256,512,1024,2048,4096};
+            conde=0;
+                printf("Ingrese el numero binario: \n");
+                scanf("%d", &bin);
+                while(bin>0){
+                    dec=bin%10;
+                    if(dec==1)
+                        tot=tot+arre[conde];
+                        conde++;
+                        bin=bin/10;
+                    
+                }
+                printf("El numero binario es: %i\n", tot);
+                }else {
+                    printf("Opcion no valida");
+                }
+            
+    
+      
+    return 0;
+}
